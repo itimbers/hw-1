@@ -31,6 +31,26 @@
 
 #Solution
 
+average_scores = {}
+
+for student in students:
+  name = student["name"]
+  scores = student["scores"]
+
+total_score = 0
+for score in scores.values():
+  total_score += score
+
+average = total_score / len(scores)
+
+average_scores[name] = average
+
+print("Students with an average score greater than 80:")
+for name, avg in average_scores.items():
+  if avg > 80:
+    print(name)
+    
+
 
 
 
